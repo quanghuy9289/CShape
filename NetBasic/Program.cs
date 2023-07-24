@@ -1,6 +1,11 @@
-﻿using System;
+﻿using NetBasic.Collections;
+using NetBasic.SerializeAndDeserialize;
+using NetBasic.System.IO;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -133,6 +138,7 @@ namespace NetBasic
             milo.ShowColor();
             */
 
+            /*
             // Polymorphism
             // da hinh thoi gian chay
             Shape s = new Shape();
@@ -142,11 +148,77 @@ namespace NetBasic
             s = new Circle();
             s.draw();
 
-            // da hinh thoi gian chay KO AP DUNG voi field
+            // da hinh thoi gian chay KO AP DUNG voi field, color van la white cua lop cha Shape
             Shape s1 = new Rect();
             Console.WriteLine(s1.color); // white - base class
             s1 = new Circle();
             Console.WriteLine(s1.color); // white - base class
+            */
+
+            /*
+            // namespace
+            First.Hello h1 = new First.Hello();
+            Second.Welcome w1 = new Second.Welcome();
+            h1.SayHello();
+            w1.SayWelcome();
+            */
+
+            /*
+            // System.IO
+            //FileStreamExample fs = new FileStreamExample();
+            //fs.WriteByteToFile("SampleFiles/test.txt");
+            //fs.ReadByteFromFile("SampleFiles/test.txt");
+
+            //StreamWriterAndStreamReader swr = new StreamWriterAndStreamReader();
+            //swr.WriteToFileWithStreamWriter("SampleFiles/output_1.txt");
+            //swr.ReadFromFileWithStreamReader("SampleFiles/output_1.txt");
+
+            //TextWriterAndTextReader twr = new TextWriterAndTextReader();
+            //twr.WriteToFileWithTextWriter("SampleFiles/output_2.txt");
+            //twr.ReadFromFileWithTextReader("SampleFiles/output_2.txt");
+
+            //BinaryWriterAndBinaryReader bwr = new BinaryWriterAndBinaryReader();
+            //bwr.WriteToFileWithBinaryWriter("SampleFiles/output_3.dat");
+            //bwr.ReadFromFileWithBinaryReader("SampleFiles/output_3.dat");
+
+            //StringWriterAndStringReader swr = new StringWriterAndStringReader();
+            //swr.WriteToStringWithStringWriter();
+            //swr.ReadFromStringWithStringReader();
+
+            FileAndFolderHandler f = new FileAndFolderHandler();
+            //f.CreateFile("SampleFiles/output_4.txt");
+            //f.WriteTextToFile("SampleFiles/output_4.txt");
+            //f.ReadDataFromFile("SampleFiles/output_4.txt");
+            //f.ScanDirectory("SampleFiles");
+            //f.ScanDriverInSystem();
+            //f.TrackingFileAndFolder("SampleFiles");
+            */
+
+            /*
+            // serialize and deserialize
+            // serialize object student and write into file
+            Student st = new Student(101, "Nguyen Van A");
+            // open file to write
+            FileStream fs = new FileStream("SampleFiles/output_5.txt", FileMode.OpenOrCreate);
+            BinaryFormatter formatter = new BinaryFormatter();
+            //formatter.Serialize(fs, st);
+
+            // deserialize
+            Student receiveStudent = (Student)formatter.Deserialize(fs);
+            Console.WriteLine("Rollno: " + receiveStudent.rollno);
+            Console.WriteLine("Name: " + receiveStudent.name);
+            */
+
+            // array list
+            //ArrayListExample ex = new ArrayListExample();
+            //ex.CreateAndPrintArrayList();
+
+            // list
+            ListExample lex = new ListExample();
+            var products = lex.InitAndPrintList();
+            lex.SearchProduct(products);
+            lex.SortProduct(products);
+
 
             Console.ReadLine();
         }

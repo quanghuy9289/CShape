@@ -48,17 +48,31 @@
     <Compile Include="11_baseKeyword.cs" />
     <Compile Include="12_Polymorphism.cs" />
     <Compile Include="13_SealedClass.cs" />
+    <Compile Include="14_namespaces.cs" />
+    <Compile Include="15_accessModifier.cs" />
     <Compile Include="2_Arrary.cs" />
     <Compile Include="1_ConditionStructure.cs" />
     <Compile Include="3_Method.cs" />
     <Compile Include="6_struct.cs" />
     <Compile Include="7_Enum.cs" />
     <Compile Include="9_Inheritance.cs" />
+    <Compile Include="Collections\ArrayListExample.cs" />
+    <Compile Include="Collections\ListExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="8_Prop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="4_StaticClass.cs" />
     <Compile Include="5_StaticConstructor.cs" />
+    <Compile Include="SerializeAndDeserialize\Student.cs" />
+    <Compile Include="System.IO\FileAndFolderHandler.cs" />
+    <Compile Include="System.IO\FileStreamExample.cs" />
+    <Compile Include="System.IO\StreamWriterAndStreamReader.cs" />
+    <Compile Include="System.IO\StringWriterAndStringReader.cs" />
+    <Compile Include="System.IO\TextWriterAndTextReader.cs" />
+    <Compile Include="System.IO\BinaryWriterAndBinaryReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SampleFiles\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
